@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8584F0041D8B05C63EC366922C63F2ABE944127B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FE08CEBC6019DF8B580694C9FEE9610AECBD952B" : 0,
+    "8584F0041D8B05C63EC366922C63F2ABE944127B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "20A3845F-6960-4AF5-A41C-559A169F122B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FE08CEBC6019DF8B580694C9FEE9610AECBD952B" : "iOSHardwareDecoder",
+    "8584F0041D8B05C63EC366922C63F2ABE944127B" : "H264Demo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "H264DecodeDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "H264DecodeDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/plumhly\/H264Demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8584F0041D8B05C63EC366922C63F2ABE944127B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stevenyao\/iOSHardwareDecoder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FE08CEBC6019DF8B580694C9FEE9610AECBD952B"
+    }
+  ]
+}
