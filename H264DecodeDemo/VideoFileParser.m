@@ -2,6 +2,7 @@
 #include "VideoFileParser.h"
 
 const uint8_t KStartCode[4] = {0, 0, 0, 1};
+const NSInteger bufferLength = 10240;
 
 @implementation VideoPacket
 - (instancetype)initWithSize:(NSInteger)size
@@ -50,8 +51,8 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     if(/*_bufferSize < _bufferCap &&*/ self.fileStream.hasBytesAvailable) {
 //        NSInteger readBytes = [self.fileStream read:_buffer + _bufferSize maxLength:_bufferCap - _bufferSize];
 //        _bufferSize += readBytes;
-        uint8_t buffer[1024];
-        NSUInteger length = [self.fileStream read:buffer maxLength:1024];
+        uint8_t buffer[bufferLength];
+        NSUInteger length = [self.fileStream read:buffer maxLength:bufferLength];
         [_data appendBytes:buffer length:length];
         
     }
