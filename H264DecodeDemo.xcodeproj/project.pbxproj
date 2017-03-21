@@ -16,6 +16,7 @@
 		DAE85EC01B733FFA00062371 /* VideoFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE85EBF1B733FFA00062371 /* VideoFileParser.m */; };
 		DAE85EC51B7349F000062371 /* AAPLEAGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE85EC41B7349F000062371 /* AAPLEAGLLayer.m */; };
 		DAE85ED61B81C94100062371 /* mtv.h264 in Resources */ = {isa = PBXBuildFile; fileRef = DAE85ED51B81C94100062371 /* mtv.h264 */; };
+		EF0653091E811462008C5DFA /* H264.data in Resources */ = {isa = PBXBuildFile; fileRef = EF0653081E811462008C5DFA /* H264.data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DAE85EC31B7349F000062371 /* AAPLEAGLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLEAGLLayer.h; sourceTree = "<group>"; };
 		DAE85EC41B7349F000062371 /* AAPLEAGLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLEAGLLayer.m; sourceTree = "<group>"; };
 		DAE85ED51B81C94100062371 /* mtv.h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mtv.h264; sourceTree = "<group>"; };
+		EF0653081E811462008C5DFA /* H264.data */ = {isa = PBXFileReference; lastKnownFileType = file; path = H264.data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		DAE85E8C1B733B2600062371 = {
 			isa = PBXGroup;
 			children = (
+				EF0653081E811462008C5DFA /* H264.data */,
 				DAE85ED51B81C94100062371 /* mtv.h264 */,
 				DAE85E971B733B2600062371 /* H264DecodeDemo */,
 				DAE85E961B733B2600062371 /* Products */,
@@ -67,6 +70,7 @@
 		DAE85E971B733B2600062371 /* H264DecodeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EF681DEE1E80D69F00E40A7C /* New Group */,
 				DAE85E9C1B733B2600062371 /* AppDelegate.h */,
 				DAE85E9D1B733B2600062371 /* AppDelegate.m */,
 				DAE85EBE1B733FFA00062371 /* VideoFileParser.h */,
@@ -90,6 +94,13 @@
 				DAE85E9A1B733B2600062371 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF681DEE1E80D69F00E40A7C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0653091E811462008C5DFA /* H264.data in Resources */,
 				DAE85EA41B733B2600062371 /* Main.storyboard in Resources */,
 				DAE85ED61B81C94100062371 /* mtv.h264 in Resources */,
 				DAE85EA91B733B2600062371 /* LaunchScreen.xib in Resources */,

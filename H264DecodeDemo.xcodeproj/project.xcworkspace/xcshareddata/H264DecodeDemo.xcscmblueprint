@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "20A3845F-6960-4AF5-A41C-559A169F122B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "FE08CEBC6019DF8B580694C9FEE9610AECBD952B" : "iOSHardwareDecoder",
+    "FE08CEBC6019DF8B580694C9FEE9610AECBD952B" : "iOSHardwareDecoder\/",
     "8584F0041D8B05C63EC366922C63F2ABE944127B" : "H264Demo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "H264DecodeDemo",
