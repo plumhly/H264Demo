@@ -27,6 +27,7 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
 }
 @property NSString *fileName;
 @property NSInputStream *fileStream;
+@property (nonatomic, strong) NSMutableData *data;
 @end
 
 @implementation VideoFileParser
@@ -36,6 +37,7 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     _bufferSize = 0;
     _bufferCap = 512 * 1024;
     _buffer = malloc(_bufferCap);
+    _data = [NSMutableData data];
     self.fileName = fileName;
     self.fileStream = [NSInputStream inputStreamWithFileAtPath:fileName];
     [self.fileStream open];
@@ -45,16 +47,22 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
 
 -(VideoPacket*)nextPacket
 {
-    if(_bufferSize < _bufferCap && self.fileStream.hasBytesAvailable) {
-        NSInteger readBytes = [self.fileStream read:_buffer + _bufferSize maxLength:_bufferCap - _bufferSize];
-        _bufferSize += readBytes;
+    if(/*_bufferSize < _bufferCap &&*/ self.fileStream.hasBytesAvailable) {
+//        NSInteger readBytes = [self.fileStream read:_buffer + _bufferSize maxLength:_bufferCap - _bufferSize];
+//        _bufferSize += readBytes;
+        uint8_t buffer[1024];
+        NSUInteger length = [self.fileStream read:buffer maxLength:1024];
+        [_data appendBytes:buffer length:length];
+        
     }
     
-    if(memcmp(_buffer, KStartCode, 4) != 0) {
+    uint8_t *buffer;
+    [_data getBytes:buffer length:4];
+    if(memcmp(buffer, KStartCode, 4) != 0) {
         return nil;
     }
     
-    if(_bufferSize >= 5) {
+    if(_data.length >= 5) {
         uint8_t *bufferBegin = _buffer + 4;
         uint8_t *bufferEnd = _buffer + _bufferSize;
         while(bufferBegin != bufferEnd) {
