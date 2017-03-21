@@ -37,7 +37,7 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
     if(_deocderSession) {
         return YES;
     }
-    
+    /*
     const uint8_t* const parameterSetPointers[2] = { _sps, _pps };
     const size_t parameterSetSizes[2] = { _spsSize, _ppsSize };
     OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault,
@@ -47,7 +47,7 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
                                                                           4, //nal start code size
                                                                           &_decoderFormatDescription);
     
-    if(status == noErr) {
+    if(status == noErr) {*/
         CFDictionaryRef attrs = NULL;
         const void *keys[] = { kCVPixelBufferPixelFormatTypeKey };
         //      kCVPixelFormatType_420YpCbCr8Planar is YUV420
@@ -60,15 +60,16 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
         callBackRecord.decompressionOutputCallback = didDecompress;
         callBackRecord.decompressionOutputRefCon = NULL;
         
-        status = VTDecompressionSessionCreate(kCFAllocatorDefault,
+        /*OSStatus status = */
+        VTDecompressionSessionCreate(kCFAllocatorDefault,
                                               _decoderFormatDescription,
                                               NULL, attrs,
                                               &callBackRecord,
                                               &_deocderSession);
         CFRelease(attrs);
-    } else {
-        NSLog(@"IOS8VT: reset decoder session failed status=%d", status);
-    }
+//    } else {
+//        NSLog(@"IOS8VT: reset decoder session failed status=%d", status);
+//    }
 
     return YES;
 }
@@ -194,7 +195,8 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
 
 -(IBAction)on_playButton_clicked:(id)sender {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [self decodeFile:@"mtv" fileExt:@"h264"];
+//        [self decodeFile:@"mtv" fileExt:@"h264"];
+        [self decodeFile:@"H264" fileExt:@"data"];
     });
 }
 
