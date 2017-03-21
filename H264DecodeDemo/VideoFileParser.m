@@ -56,24 +56,27 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
         
     }
     
-    uint8_t *buffer;
+    uint8_t buffer[4];
     [_data getBytes:buffer length:4];
     if(memcmp(buffer, KStartCode, 4) != 0) {
         return nil;
     }
-    
+    uint8_t *begainP = (uint8_t *)_data.bytes;
     if(_data.length >= 5) {
-        uint8_t *bufferBegin = _buffer + 4;
-        uint8_t *bufferEnd = _buffer + _bufferSize;
+        uint8_t *bufferBegin = begainP + 4;
+        
+        uint8_t *bufferEnd = begainP + _data.length;
+        
         while(bufferBegin != bufferEnd) {
             if(*bufferBegin == 0x01) {
                 if(memcmp(bufferBegin - 3, KStartCode, 4) == 0) {
-                    NSInteger packetSize = bufferBegin - _buffer - 3;
+                    NSInteger packetSize = bufferBegin - begainP - 3;
                     VideoPacket *vp = [[VideoPacket alloc] initWithSize:packetSize];
-                    memcpy(vp.buffer, _buffer, packetSize);
+                    memcpy(vp.buffer, begainP, packetSize);
                     
-                    memmove(_buffer, _buffer + packetSize, _bufferSize - packetSize);
-                    _bufferSize -= packetSize;
+//                    memmove(_buffer, _buffer + packetSize, _bufferSize - packetSize);
+                    [_data replaceBytesInRange:NSMakeRange(0, packetSize) withBytes:NULL length:0];
+//                    _bufferSize -= packetSize;
                     
                     return vp;
                 }
