@@ -6,31 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "H264DecodeDemo/VideoFileParser.m"
-            timestampString = "511759809.877877"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-nextPacket"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "H264DecodeDemo/ViewController.m"
-            timestampString = "511776066.030754"
+            timestampString = "511845953.909964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-decodeFile:fileExt:"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "H264DecodeDemo/VideoFileParser.m"
-            timestampString = "511776106.632574"
+            filePath = "H264DecodeDemo/ViewController.m"
+            timestampString = "511846054.500279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-nextPacket"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-decodeFile:fileExt:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

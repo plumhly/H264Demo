@@ -195,8 +195,8 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
 
 -(IBAction)on_playButton_clicked:(id)sender {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//        [self decodeFile:@"mtv" fileExt:@"h264"];
-        [self decodeFile:@"H264" fileExt:@"data"];
+        [self decodeFile:@"mtv" fileExt:@"h264"];
+//        [self decodeFile:@"H264" fileExt:@"data"];
     });
 }
 
